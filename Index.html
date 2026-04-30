@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FoodBot 🍔</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #ff9a9e, #fad0c4);
+        text-align: center;
+    }
+
+    header {
+        background-color: #ff6f61;
+        color: white;
+        padding: 20px;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .container {
+        margin-top: 80px;
+    }
+
+    h1 {
+        font-size: 40px;
+        color: #333;
+    }
+
+    p {
+        font-size: 18px;
+        color: #555;
+    }
+
+    .food-icons {
+        font-size: 50px;
+        margin-top: 20px;
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: #333;
+        color: white;
+        padding: 10px;
+        font-size: 14px;
+    }
+</style>
+
+</head>
+
+<body>
+
+<header>
+    🍔 FoodBot Assistant
+</header>
+
+<div class="container">
+    <h1>Welcome to FoodBot 😋</h1>
+    <p>Ask me what you should eat today!</p>
+
+    <div class="food-icons">
+        🍕 🍔 🍟 🥪 🍝
+    </div>
+</div>
+
+<div class="footer">
+    Powered by IBM Watson Assistant
+</div>
+
+<!-- Watson Assistant Chat -->
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "5efb8d60-a951-4a1c-b535-daaec6f48f4d",
+    region: "eu-de",
+    serviceInstanceID: "ee25e0bf-9270-4aee-8671-a7adfdf901a9",
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+
+</body>
+</html>
